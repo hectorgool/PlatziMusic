@@ -1,0 +1,6 @@
+1. android avd
+2. iniciar un emulardor
+3. react-native start > /dev/null 2>&1 &
+4. react-native run-android
+
+Oprimir 2 veces la tecla "r", para actualizar los cambios.
