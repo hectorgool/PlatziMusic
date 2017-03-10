@@ -4,3 +4,9 @@
 4. react-native run-android
 
 Oprimir 2 veces la tecla "r", para actualizar los cambios.
+
+npm install react-native-vector-icons --save
+
+react-native link react-native-vector-icons
+
+Revisar video 11 - Flexbox
