@@ -10,3 +10,7 @@ npm install react-native-vector-icons --save
 react-native link react-native-vector-icons
 
 Revisar video 11 - Flexbox
+
+<ScrollView/> funciona bien con pocos items
+
+<ListView /> listaas grandes, dinámicas

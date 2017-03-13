@@ -11,6 +11,7 @@ import {
   Text,
   View,
   Image,
+  ScrollView,
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -37,16 +38,15 @@ export default class PlatziMusic extends Component {
     return (
       <View style={styles.container}>
 
-        <View style={styles.imageBox}>
-          <ArtistBox artist={artist} />
-          <ArtistBox artist={artist} />
-          <ArtistBox artist={artist} />
-          <ArtistBox artist={artist} />
-          <ArtistBox artist={artist} />
-          <ArtistBox artist={artist} />
-          <ArtistBox artist={artist} />
-          <ArtistBox artist={artist} />
-        </View>
+        <ScrollView style={styles.imageBox}>
+
+          {
+            Array(500).fill(artist).map(artist => {
+              return <ArtistBox artist={artist} />
+            })
+          }
+
+        </ScrollView>
 
       </View>
     );
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'lightgray',
-    paddingTop: 50,
+    paddingTop: 5,
   },
 });
 
