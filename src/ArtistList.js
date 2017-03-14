@@ -30,6 +30,15 @@ export default class ArtisList extends Component {
     };
   }
 
+  componentWillReciveProps(newProps){
+    if(newProps.artists !== this.props.artists){
+      //console.warn('cambio la lista');
+      this.setState({
+        dataSource: this.state.dataSource.cloneWithRows(newProps)
+      })
+    }
+  }
+
   render() {
 
     const artist = {

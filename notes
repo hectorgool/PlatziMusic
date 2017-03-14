@@ -14,3 +14,15 @@ Revisar video 11 - Flexbox
 <ScrollView/> funciona bien con pocos items
 
 <ListView /> listaas grandes, dinámicas
+
+
+
+Application name	PlatziMusic
+API key	aa9425f58f6a87bfa7393d2485c86cb8
+Shared secret	c116a00192d06b97f7b0c832bc13e02d
+Registered to	hectorgool
+
+
+http://ws.audioscrobbler.com/2.0/?method=geo.gettopartists&country=spain&api_key=aa9425f58f6a87bfa7393d2485c86cb8&format=json
+
+http://ws.audioscrobbler.com/2.0/?method=geo.gettopartists&country=mexico&api_key=aa9425f58f6a87bfa7393d2485c86cb8&format=json

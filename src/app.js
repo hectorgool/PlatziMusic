@@ -19,18 +19,23 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import ArtistBox from './ArtistBox';
 import ArtistList from './ArtistList';
+import { getArtists } from './api-client';
 
 export default class PlatziMusic extends Component {
 
+  state = {
+    artists: []
+  }
+
+  componentDidMount(){
+    getArtists()
+      .then(data => this.setState({ artists: data }))
+  }
+
   render() {
 
-    const artist = {
-      image: 'https://static.pexels.com/photos/163429/surf-outdoor-sports-surfer-surfing-163429.jpeg',
-      name: 'Surf asdf',
-      likes: 200,
-      comments: 140,
-    }
-    const artists = Array(3).fill(artist);
+    const artists = this.state.artists;
+    console.warn('artists', artists)
 
     return (
       <View style={styles.container}>
