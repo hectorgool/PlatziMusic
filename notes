@@ -3,6 +3,8 @@
 3. react-native start > /dev/null 2>&1 &
 4. react-native run-android
 
+npm i --save react
+
 Oprimir 2 veces la tecla "r", para actualizar los cambios.
 
 npm install react-native-vector-icons --save
@@ -16,6 +18,7 @@ Revisar video 11 - Flexbox
 <ListView /> listaas grandes, dinámicas
 
 
+npm start -- --reset-cache
 
 Application name	PlatziMusic
 API key	aa9425f58f6a87bfa7393d2485c86cb8
@@ -42,3 +45,9 @@ warning: 'In next release empty section headers will be rendered'
   dataSource={this.state.dataSource}
   renderRow={(artist) => <ArtistBox artist={artist} /> }
 />
+
+npm i react-native-router-flux --save
+
+watchman watch-del-all
+rm -rf node_modules && npm install
+rm -rf $TMPDIR/react-*

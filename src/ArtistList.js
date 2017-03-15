@@ -13,9 +13,11 @@ import {
   //Image,
   //ScrollView,
   ListView,
+  TouchableOpacity,
 } from 'react-native';
 
 import ArtistBox from './ArtistBox';
+import { Actions } from 'react-native-router-flux';
 
 export default class ArtisList extends Component {
 
@@ -43,21 +45,25 @@ export default class ArtisList extends Component {
     })
   }
 
+  handlePress(artist){
+    //console.warn('artist', artist)
+    Actions.artistDetail({artist})
+  }
+
   render() {
-
-    const artist = {
-      image: 'https://static.pexels.com/photos/163429/surf-outdoor-sports-surfer-surfing-163429.jpeg',
-      name: 'Surf asdf',
-      likes: 200,
-      comments: 140,
-    }
-
     return (
       <View style={styles.container}>
         <ListView
           enableEmptySections={true}
           dataSource={this.state.dataSource}
-          renderRow={(artist) => <ArtistBox artist={artist} /> }
+          renderRow={(artist) => {
+            return (
+              <TouchableOpacity
+                onPress={ () => this.handlePress(artist) }>
+                <ArtistBox artist={artist} />
+              </TouchableOpacity>
+            )
+          }}
         />
       </View>
     );

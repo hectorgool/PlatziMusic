@@ -7,9 +7,11 @@
     "test": "jest"
   },
   "dependencies": {
-    "react": "15.4.2",
+    "react": "^15.4.2",
     "react-native": "0.42.0",
-    "react-native-vector-icons": "^4.0.0"
+    "react-native-router-flux": "^3.38.0",
+    "react-native-vector-icons": "^4.0.0",
+    "watchman": "^0.1.8"
   },
   "devDependencies": {
     "babel-jest": "19.0.0",
