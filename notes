@@ -26,3 +26,19 @@ Registered to	hectorgool
 http://ws.audioscrobbler.com/2.0/?method=geo.gettopartists&country=spain&api_key=aa9425f58f6a87bfa7393d2485c86cb8&format=json
 
 http://ws.audioscrobbler.com/2.0/?method=geo.gettopartists&country=mexico&api_key=aa9425f58f6a87bfa7393d2485c86cb8&format=json
+
+
+warning: 'In next release empty section headers will be rendered'
+
+
+<ListView
+  dataSource={this.state.dataSource}
+  renderRow={(artist) => <ArtistBox artist={artist} /> }
+/>
+
+
+<ListView
+  enableEmptySections={true}
+  dataSource={this.state.dataSource}
+  renderRow={(artist) => <ArtistBox artist={artist} /> }
+/>

@@ -35,7 +35,6 @@ export default class PlatziMusic extends Component {
   render() {
 
     const artists = this.state.artists;
-    console.warn('artists', artists)
 
     return (
       <View style={styles.container}>

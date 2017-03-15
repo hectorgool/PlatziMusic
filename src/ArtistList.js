@@ -15,8 +15,6 @@ import {
   ListView,
 } from 'react-native';
 
-//import Icon from 'react-native-vector-icons/Ionicons';
-
 import ArtistBox from './ArtistBox';
 
 export default class ArtisList extends Component {
@@ -24,19 +22,25 @@ export default class ArtisList extends Component {
   constructor(props) {
     super(props);
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-
     this.state = {
-      dataSource: ds.cloneWithRows(props.artists)
-    };
+      dataSource: ds
+    }
   }
 
-  componentWillReciveProps(newProps){
+  componentDidMount(){
+    this.updateDataSource(this.props.artists)
+  }
+
+  componentWillReceiveProps(newProps){
     if(newProps.artists !== this.props.artists){
-      //console.warn('cambio la lista');
-      this.setState({
-        dataSource: this.state.dataSource.cloneWithRows(newProps)
-      })
+      this.updateDataSource(newProps.artists)
     }
+  }
+
+  updateDataSource = (data) => {
+    this.setState({
+      dataSource: this.state.dataSource.cloneWithRows(data)
+    })
   }
 
   render() {
@@ -51,6 +55,7 @@ export default class ArtisList extends Component {
     return (
       <View style={styles.container}>
         <ListView
+          enableEmptySections={true}
           dataSource={this.state.dataSource}
           renderRow={(artist) => <ArtistBox artist={artist} /> }
         />
@@ -66,5 +71,3 @@ const styles = StyleSheet.create({
     paddingTop: 5,
   },
 });
-
-//AppRegistry.registerComponent('PlatziMusic', () => PlatziMusic);
