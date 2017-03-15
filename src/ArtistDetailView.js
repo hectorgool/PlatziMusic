@@ -13,6 +13,7 @@ import {
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import ArtistBox from './ArtistBox';
+import ArtistBoxDetail from './ArtistBoxDetail';
 import ArtistList from './ArtistList';
 import { getArtists } from './api-client';
 
@@ -24,7 +25,7 @@ export default class ArtistDetailView extends Component {
 
     return (
       <View style={styles.container}>
-        <ArtistBox artist={artist}/>
+        <ArtistBoxDetail artist={artist}/>
       </View>
     );
   }

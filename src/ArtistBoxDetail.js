@@ -14,7 +14,7 @@ import {
 
 import Icon from 'react-native-vector-icons/Ionicons';
 
-export default class ArtistBox extends Component {
+export default class ArtistBoxDetail extends Component {
   render() {
 
     const { image, name, likes, comments } = this.props.artist;
@@ -32,7 +32,7 @@ export default class ArtistBox extends Component {
             </View>
             <View style={styles.iconContainer}>
               <Icon name="md-chatboxes" size={30} color="gray" />
-              <Text style={styles.count}>{comments}</Text>
+              <Text style={styles.count}>{comments}**</Text>
             </View>
           </View>
         </View>
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   },
   image:{
     width: 150,
-    height: 150,
+    height: 200,
   },
   imageBox:{
     backgroundColor: 'white',
