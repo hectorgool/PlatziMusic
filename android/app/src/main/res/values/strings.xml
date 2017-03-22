@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PlatziMusic</string>
+    <!--santo-->
+    <string name="facebook_app_id">249183388545242</string>
 </resources>

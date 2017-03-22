@@ -1,6 +1,7 @@
 package com.platzimusic;
 
 import com.facebook.react.ReactActivity;
+import android.content.Intent;//santo
 
 public class MainActivity extends ReactActivity {
 
@@ -12,4 +13,12 @@ public class MainActivity extends ReactActivity {
     protected String getMainComponentName() {
         return "PlatziMusic";
     }
+
+    //santo
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        MainApplication.getCallbackManager().onActivityResult(requestCode, resultCode, data);
+    }
+
 }
